@@ -17,7 +17,6 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Document {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,6 +34,4 @@ public class Document {
     @JsonFormat(pattern = "EEE, d MMM yyyy HH:mm")
     private Date created_date;
     private int numberOfCopy;
-
-
 }

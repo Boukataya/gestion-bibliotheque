@@ -27,14 +27,17 @@
               "src/assets"
             ],
             "styles": [
+
               "src/assets/css/custom-bootstrap/main.css",
               "src/assets/icons/icomoon/style.css",
               "node_modules/boxicons/css/boxicons.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ]
           },
           "configurations": {

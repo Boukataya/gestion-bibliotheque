@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {HomeComponent} from "./home/home.component";
 import {RouterModule, Routes} from '@angular/router';
 import {MembersListComponent} from "./members-list/members-list.component";
-import {HasRoleGuard} from "../../shared/guards/has-role.guard";
 
 
 const routes: Routes = [
@@ -14,10 +13,7 @@ const routes: Routes = [
   {
     path: 'members',
     component: MembersListComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: 'ADMIN'
-    }
+
   }
 
 ];

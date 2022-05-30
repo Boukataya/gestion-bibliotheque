@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../../environments/environment";
 import {Router} from "@angular/router";
 
 @Component({
@@ -30,14 +29,5 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signupForm.value);
-    this.http.post(environment.baseURl + 'admin/create', this.signupForm.value).subscribe(
-      (response) => {
-        console.log(response);
-        this.router.navigate(['/login']).then(r => console.log(r));
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
   }
 }

@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import {AuthService} from "../../services/auth.service";
 import {Router} from "@angular/router";
+import {AuthenticationService} from "../../../_services/authentication.service";
+import {User} from "../../../_models/user";
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -10,17 +11,17 @@ import {Router} from "@angular/router";
 export class DashboardLayoutComponent implements OnInit {
   username: string;
   roles: string;
+  user: User = this.authenticationService.userValue;
 
   constructor(
     private elementRef: ElementRef,
-    public authService: AuthService,
+    private authenticationService: AuthenticationService,
     private router: Router) {
   }
 
 
   ngOnInit() {
-    this.username = localStorage.getItem('username');
-    this.roles = localStorage.getItem('roles');
+
   }
 
   toggleSidebar() {
@@ -42,7 +43,8 @@ export class DashboardLayoutComponent implements OnInit {
 
 
   logout() {
-    this.authService.doLogout();
+    console.log("logout");
+    this.authenticationService.logout();
+    this.router.navigate(['/']);
   }
-
 }

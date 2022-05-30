@@ -1,7 +1,6 @@
 package com.eBiblio.controllers;
 
 import com.eBiblio.models.domaine.dto.DocumentDto;
-import com.eBiblio.models.domaine.dto.MemberDto;
 import com.eBiblio.services.document.IDocumentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

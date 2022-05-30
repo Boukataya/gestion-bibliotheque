@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {DashboardLayoutComponent} from "./shared/layouts/dashboard-layout/dashboard-layout.component";
 import {AuthLayoutComponent} from "./shared/layouts/auth-layout/auth-layout.component";
-import {AuthGuard} from "./shared/guards/auth.guard";
+import {AuthGuard} from "./_helpers/auth.guard";
 
 
 const routes: Routes = [
@@ -26,8 +26,8 @@ const routes: Routes = [
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       }
     ],
-    canActivate: [AuthGuard]
-
+    canActivate: [AuthGuard],
+    data: { allowedRoles: ['ADMIN', 'PERMANENT'] }
   }
 ];
 

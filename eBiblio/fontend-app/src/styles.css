@@ -27,7 +27,9 @@ a:hover {
 .content {
   padding: 7rem 0;
 }
-
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+}
 h2 {
   font-size: 20px;
 }

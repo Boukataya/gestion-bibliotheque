@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {DocumentService} from "../../../shared/services/document.service";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-documents',
@@ -7,13 +6,9 @@ import {DocumentService} from "../../../shared/services/document.service";
   styleUrls: ['./documents.component.css']
 })
 export class DocumentsComponent implements OnInit {
-  allDocuments: any;
-  constructor(private documentService: DocumentService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.documentService.getAllDocument().subscribe(data => {
-      this.allDocuments = data;
-    });
   }
 
 }
